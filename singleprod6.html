@@ -1,0 +1,382 @@
+<html>
+  
+  <head>
+    <title>Attacca Co.</title>
+     <script src="https://kit.fontawesome.com/06d97b0e34.js" crossorigin="anonymous"></script>
+    
+    <style>
+    .logo{
+      background-repeat: no-repeat;
+      background-position: left;
+      height: 80px;
+    }
+    body{
+      font-family: "Quicksand", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+     #header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 80px;
+      background-color: #E3E6F3;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+      position: sticky;
+      top: 0;
+      left: 0;
+    }
+    #navbar{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #navbar li{
+      list-style: none;
+      padding: 0 20px;
+      position: relative;
+    }
+    #navbar li a{
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1a1a1a;
+      transition: 0.3s ease;
+    }
+    #navbar li a:hover{
+      color: #9F1111;
+    }
+    #navbar li a:hover,
+    #navbar li a.active{
+      color: #9F1111;
+    }
+    #navbar li a.active::after,
+    #navbar li a:hover::after{
+      content: "";
+      width: 30%;
+      height: 2px;
+      background: #9F1111;
+      position: absolute;
+      bottom: -4px;
+      left: 20px;
+    }
+    footer{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-color:#E3E6F3;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+    footer .col{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 5px 10px;
+    }
+    footer h4{
+      font-size: 14px;
+      padding-bottom: 10px;
+    }
+    footer p{
+      font-size: 13px;
+      margin: 0 0 8px 0;
+    }
+    footer a{
+      font-size: 13px;
+      text-decoration: none;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+    footer .socials{
+      margin-top: 20px;
+    }
+    footer .socials i{
+      padding-right: 4px;
+    }
+    footer .socials i:hover,
+    footer a:hover{
+      color: #9F1111
+    }
+    .footer-img{
+      width: 100%;
+      max-width: 200px;
+      margin-bottom: 0px;
+    }
+    .icons{
+      cursor: pointer;
+    }
+    footer .copyright{
+      width: 100%;
+      text-align: center;
+    }
+    #product1{
+      padding: 20px 80px;
+      text-align: center;
+      margin-bottom: 50px;
+        
+    }
+    #product1 .prod-container{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      padding-bottom: 20px;
+      
+    }
+    #product1 .prod{
+      width: calc(25% - 20px);
+      min-width: 250px;
+      padding: 20px;
+      margin: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+    #product1 .prod:hover{
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    #product1 .prod img{
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+    .prod .desc{
+      text-align: start;
+      width: 100%;
+    }
+    .prod .desc span{
+      font-size: 16px;
+      color: #9D989C;
+      font-weight: 600;
+      margin-bottom: 5px;
+      display: block;
+    }
+    .prod .desc h5{
+      padding-top: 0px;
+      font-size: 16px;
+      margin: 0 0 5px 0;
+    }
+    .star{
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 5px;
+      color: #E7AF48;
+    }
+    .prod .desc h4{
+      font-size: 18px;
+      margin: 0;
+    }
+    .prod a{
+      margin-top: 10px;
+      font-size: 20px;
+      transition: color 0.3s;
+      color: #000000;
+      position: absolute;
+      bottom: 20px;
+      right: 10px;
+    }
+    .prod a:hover{
+      color: #9F1111;
+    }
+    #banilaco {
+      display: flex;
+      margin-top: 20px;
+    }
+    #banilaco .baco-img{
+      width: 40%;
+      margin-right: 50px;
+      padding-left: 20px;
+    }
+    #banilaco .baco-details{
+      width: 50%;
+      padding-top: 30px;
+    }
+    #banilaco .baco-details h4{
+      padding: 40px 0 10px 0px
+      margin-bottom: 5px;
+    }
+    #banilaco .baco-details h2{
+      font-size: 26px;
+    }
+    #banilaco .baco-details select{
+      display: block;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+    }
+    #banilaco .baco-details input{
+      width: 50px;
+      height: 47px
+      padding-left: 10px;
+      font-size: 15px;
+      margin-right: 10px;
+    }
+    #banilaco .baco-details input:focus{
+      outline: none;
+    }
+    #banilaco .baco-details button{
+      background-color: #9F1111;
+      color: white;
+      font-weight: 600;
+      width: 100px;
+      height: 50px;
+      cursor: pointer;
+      border: none;
+    }
+    #banilaco .baco-details button:hover{
+      background-color: #6C0D0D;
+      transition: transform 0.3s ease;
+    }
+    #banilaco .baco-details span{
+      line-height: 25px;
+      margin-top: 0;
+      padding-bottom: 50px;
+      color: #8C8D8E;
+      font-weight: 600;
+    }
+      
+      
+      
+      
+    </style>
+    
+  </head>
+  
+  <body>
+    
+     <section id="header">
+      
+      <a href="index.html"><img src="logo final.png" class="logo"></a>
+      
+      <div>
+        
+        <ul id="navbar">
+          
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="products.html">Shop</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          
+        </ul>
+        
+      </div>
+      
+    </section>
+    
+    
+     <section id="banilaco" class="section-p1">
+       
+        <div class="baco-img">
+       <img src="palermo.png" id="mainimg">
+     </div>
+    
+    <div class="baco-details">
+      
+      <h6>Shoes / Footwear </h6>
+      
+      <h3>PUMA</h3>
+      
+      <h2>Palermo Leather Sneakers Unisex</h2>
+      
+      <h2>₱6000.00</h2>
+      
+      <select>
+        <option>Select Variation</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10L</option>
+        <option>11</option>
+      </select>
+      
+      <input type="number" value="1">
+      <button class="normal" onclick="addToCart()">Add To Cart</button>
+      
+      <h4>Product Details</h4>
+      <span>Straight from the archives, it’s the PUMA Palermo. This classic terrace shoe builds on PUMA’s heritage within football, while appealing to today’s sneakerheads and fashion mav...</span>
+      
+    </div>
+    
+     </section>
+     
+    
+    
+     <footer class="section-p1">
+      
+      <div class="col">
+        
+        <img src="logo final.png" class="footer-img">
+        <h4>Contact</h4>
+        <p><strong>Address:</strong> #17 Rose Quartz Rd., Serenity Drive, Gangnam-gu, Seoul</p>
+        <p><strong>Contact:</strong> +111 2222 3333 4444</p>
+        <p><strong>Working Hours:</strong> 9:00 AM - 8:00 PM</p>
+        
+        <div class="socials">
+          
+          <h4>Follow Us</h4>
+          
+          <div class="icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+      <div class="col">
+        
+        <h4>About</h4>
+        <a href="about.html">About us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="contact.html">Contact us</a>
+      </div>
+      
+      
+      
+      <div class="col">
+        
+        <h4>My Account</h4>
+        <a href="#">Track My Order</a>
+        <a href="cart.html">Cart</a>
+        <a href="#">Help</a>
+      </div>
+      
+      <div class="copyright">
+        
+        <p>© 2024, Attacca Co. - Web Design Principles Lab Final Project</p>
+        
+      </div>
+      
+    </footer>
+    
+    
+     <script>
+       
+       function addToCart(){
+         alert("Product successfully added to cart.");
+       }
+       
+     </script>
+    
+    
+    
+  </body>
+  
+  
+  
+  
+  
+</html>

@@ -1,0 +1,254 @@
+<html>
+  
+  <head>
+    <title>Attacca Co.</title>
+    <script src="https://kit.fontawesome.com/06d97b0e34.js" crossorigin="anonymous"></script>
+    
+    <style>
+    .logo{
+      background-repeat: no-repeat;
+      background-position: left;
+      height: 80px;
+
+    }
+    body{
+      font-family: "Quicksand", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    #header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 80px;
+      background-color: #E3E6F3;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+      position: sticky;
+      top: 0;
+      left: 0;
+    }
+    #navbar{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #navbar li{
+      list-style: none;
+      padding: 0 20px;
+      position: relative;
+    }
+    #navbar li a{
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1a1a1a;
+      transition: 0.3s ease;
+    }
+    #navbar li a:hover{
+      color: #9F1111;
+    }
+    #navbar li a:hover,
+    #navbar li a.active{
+      color: #9F1111;
+    }
+    #navbar li a.active::after,
+    #navbar li a:hover::after{
+      content: "";
+      width: 30%;
+      height: 2px;
+      background: #9F1111;
+      position: absolute;
+      bottom: -4px;
+      left: 20px;
+    }
+    h2{
+      font-size: 45px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    footer{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-color:#E3E6F3;
+      padding: 40px;
+    }
+    footer .col{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 5px;
+    }
+    footer h4{
+      font-size: 14px;
+      padding-bottom: 10px;
+    }
+    footer p{
+      font-size: 13px;
+      margin: 0 0 8px 0;
+    }
+    footer a{
+      font-size: 13px;
+      text-decoration: none;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+    footer .socials{
+      margin-top: 20px;
+    }
+    footer .socials i{
+      padding-right: 4px;
+    }
+    footer .socials i:hover,
+    footer a:hover{
+      color: #9F1111
+    }
+    .footer-img{
+      width: 100%;
+      max-width: 200px;
+      margin-bottom: 0px;
+    }
+    .icons{
+      cursor: pointer;
+    }
+    footer .copyright{
+      width: 100%;
+      text-align: center;
+    }
+    #abt{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 30px;
+    }
+    #abt .abt-content{
+      padding: 0 20px 0 20px;
+    }
+    #abt .abt-content h2{
+      padding-top: 20px;
+    }
+    #abt .abt-content h3{
+      font-size: 25px;
+      font-weight: 700;
+    }
+    #abt .abt-content h4{
+      color: #8C8D8E;
+      font-weight: 600;
+      line-height: 25px;
+      
+    }
+    
+  </style>
+    
+  </head>
+  
+  
+  
+  <body>
+    
+    
+    <section id="header">
+      
+      <a href="index.html"><img src="logo final.png" class="logo"></a>
+      
+      <div>
+        
+        <ul id="navbar">
+          
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a class="active" href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          
+        </ul>
+        
+      </div>
+      
+    </section>
+    
+    <section id="abt" class="section-p1">
+      <div class="abt-content">
+      <h2>Get to know what Attacca Co. is</h2>
+      
+      <h3>Who are we?</h3>
+      
+      <h4>Attacca Co. is more than just an ecommerce platform; we are your trusted partner in the journey of discovering and enhancing your unique style and beauty. Founded in 2024, we have quickly become a leading destination for those who seek the best in fashion, makeup, beauty, skincare, and perfumes. Our mission is to celebrate individuality and empower our customers to express themselves confidently through high-quality, stylish, and innovative products. </h4>
+      
+      <h3>What we offer</h3>
+      
+      <h4>Attacca Co. has curated brands that are both established and start ups to cater to diverse tastes and styles. Whether you're looking for everyday wear or something for a special occasion, we have the perfect outfit for you. Attacca Co. offers products that includes top-quality products that allow us to express ourselves confidently. </h4>
+      
+      <h3>Let's be Attacca Friends!</h3>
+      
+      <h4>Be a part of the Attacca Co. community and stay connected with the latest trends, exclusive offers, and beauty tips. Follow us on our social media accounts.</h4>
+      <h4>Thank you for choosing Attacca Co. We are honored to accompany you on your journey to discover and celebrate your unique beauty and style. Together, let's create a world where everyone feels confident and beautiful.</h4>
+      
+      </div>
+    </section>
+    
+ 
+    
+    <footer class="section-p1">
+      
+      <div class="col">
+        
+        <img src="logo final.png" class="footer-img">
+        <h4>Contact</h4>
+        <p><strong>Address:</strong> #17 Rose Quartz Rd., Serenity Drive, Gangnam-gu, Seoul</p>
+        <p><strong>Contact:</strong> +111 2222 3333 4444</p>
+        <p><strong>Working Hours:</strong> 9:00 AM - 8:00 PM</p>
+        
+        <div class="socials">
+          
+          <h4>Follow Us</h4>
+          
+          <div class="icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+      <div class="col">
+        
+        <h4>About</h4>
+        <a href="about.html">About us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="contact.html">Contact us</a>
+      </div>
+      
+      
+      
+      <div class="col">
+        
+        <h4>My Account</h4>
+        <a href="#">Track My Order</a>
+        <a href="cart.html">Cart</a>
+        <a href="#">Help</a>
+      </div>
+      
+      <div class="copyright">
+        
+        <p>© 2024, Attacca Co. - Web Design Principles Lab Final Project</p>
+        
+      </div>
+      
+    </footer>
+    
+    
+    
+    
+  </body>
+  
+  
+  
+  
+  
+  
+</html>

@@ -1,0 +1,560 @@
+<html>
+  
+  <head>
+    <title>Attacca Co.</title>
+    <script src="https://kit.fontawesome.com/06d97b0e34.js" crossorigin="anonymous"></script>
+    
+    <style>
+    .logo{
+      background-repeat: no-repeat;
+      background-position: left;
+      height: 80px;
+
+    }
+    body{
+      font-family: "Quicksand", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    #header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 80px;
+      background-color: #E3E6F3;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+      position: sticky;
+      top: 0;
+      left: 0;
+    }
+    #navbar{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #navbar li{
+      list-style: none;
+      padding: 0 20px;
+      position: relative;
+    }
+    #navbar li a{
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1a1a1a;
+      transition: 0.3s ease;
+    }
+    #navbar li a:hover{
+      color: #9F1111;
+    }
+    #navbar li a:hover,
+    #navbar li a.active{
+      color: #9F1111;
+    }
+    #navbar li a.active::after,
+    #navbar li a:hover::after{
+      content: "";
+      width: 30%;
+      height: 2px;
+      background: #9F1111;
+      position: absolute;
+      bottom: -4px;
+      left: 20px;
+    }
+    h2{
+      font-size: 45px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    footer{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-color:#E3E6F3;
+      padding: 40px;
+    }
+    footer .col{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 5px;
+    }
+    footer h4{
+      font-size: 14px;
+      padding-bottom: 10px;
+    }
+    footer p{
+      font-size: 13px;
+      margin: 0 0 8px 0;
+    }
+    footer a{
+      font-size: 13px;
+      text-decoration: none;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+    footer .socials{
+      margin-top: 20px;
+    }
+    footer .socials i{
+      padding-right: 4px;
+    }
+    footer .socials i:hover,
+    footer a:hover{
+      color: #9F1111
+    }
+    .footer-img{
+      width: 100%;
+      max-width: 200px;
+      margin-bottom: 0px;
+    }
+    .icons{
+      cursor: pointer;
+    }
+    footer .copyright{
+      width: 100%;
+      text-align: center;
+    }
+    #cart{
+      padding-top:30px;
+      padding-bottom: 30px;
+      align-items: center;
+      justify-content: center;
+    }
+    #cart table{
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      white-space: nowrap;
+    }
+    #cart table img{
+      width: 100px;
+    }
+    #cart table td:nth-child(1){
+      width: 100px;
+      text-align: center;
+    }
+    #cart table td:nth-child(2){
+      width: 150px;
+      text-align: center;
+    }
+    #cart table td:nth-child(3){
+      width: 250px;
+      text-align: center;
+    }
+    #cart table td:nth-child(4),
+    #cart table td:nth-child(5),
+    #cart table td:nth-child(6){
+      width: 150px;
+      text-align: center;
+    }
+    #cart table td:nth-child(5) input{
+      width: 70px;
+      padding: 10px 5px 10px 15px;
+    }
+    #cart table thead{
+      border: 1px solid #e2e9e1;
+      border-left: none;
+      border-right: none;
+      
+    }
+    #cart table thead td{
+      font-weight: 600;
+      color: #8C8D8E;
+      text-transform: uppercase;
+      font-size: 13px;
+      padding: 18px 0;
+    }
+    #cart table tbody tr td{
+      padding-top: 15px;
+    }
+    #cart table tbody td{
+      font-size: 14px;
+      font-weight: 600;
+      color: #8C8D8E;
+    }
+    #cart-add{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-bottom: 30px;
+      
+    }
+    #subtotal{
+      width: 50%;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      
+    }
+    #subtotal table{
+      border-collapse: collapse;
+      width: 90%;
+      margin-bottom: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    #subtotal table td{
+      width: 50%;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    #subtotal h3{
+      margin-left: 20px;
+    }
+    #subtotal button{
+      background-color:#9F1111 ;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      width: 100px;
+      height: 50px;
+      outline: none;
+      cursor: pointer;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      
+    }
+    #subtotal button:hover{
+      color: white;
+      background-color: #651010;
+      transition: transform 0.3s ease;
+      
+    }
+    #customer-details{
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    #customer-details label{
+      font-size: 18px;
+      font-weight: 600;
+    }
+    #customer-details input[type="text"],
+    #customer-details input[type="email"],
+    #customer-details textarea{
+     width: 100%;
+     padding: 10px;
+     margin: 8px 0;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     box-sizing: border-box;
+    }
+    #customer-details button[type="submit"]{
+      background-color: #9F1111;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      width: 100px;
+      height: 40px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #customer-details button[type="submit"]:hover{
+      background-color: #651010;
+    }
+      
+   
+      
+    
+    
+    
+  </style>
+    
+  </head>
+  
+  
+  
+  <body>
+    
+    
+    <section id="header">
+      
+      <a href="index.html"><img src="logo final.png" class="logo"></a>
+      
+      <div>
+        
+        <ul id="navbar">
+          
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a class="active" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          
+        </ul>
+        
+      </div>
+      
+    </section>
+    
+    <section id="customer-details" class="section-p1">
+    <h2>Customer Details</h2>
+    <form id="customer-form">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br>
+      <label for="address">Address:</label><br>
+      <textarea id="address" name="address"></textarea><br>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+    <section id="cart" class="section-p1">
+      
+      <table width="100%">
+        
+        
+        <thead>
+          <tr>
+            <td>Remove</td>
+            <td>Preview</td>
+            <td>Product</td>
+            <td>Price</td>
+            <td>Quantity</td>
+            <td>Subtotal</td>
+          </tr>
+        </thead>
+        
+        <tbody>
+          
+          <tr>
+            <td>
+              <a href="#"><i class="fa-regular fa-trash-can"></i></a>
+            </td>
+            
+            <td><img src="gentle monster.png"></td>
+            
+            <td>Third Kind C1</td>
+            
+            <td>₱23,282.00</td>
+            
+            <td>
+              
+              <input type="number" value="1" class="quantity" data-price="23282" data-subtotal="subtotal1">
+              
+            </td>
+            
+            <td id="subtotal1" class="subtotal">₱23,282.00</td>
+            
+          </tr>
+          
+          <tr>
+            <td>
+              <a href="#"><i class="fa-regular fa-trash-can"></i></a>
+            </td>
+            
+            <td><img src="miumiu polo.png"></td>
+            
+            <td>Miu Miu Logo-Print Poplin Shirt [M]</td>
+            
+            <td>₱78,710.00</td>
+            
+            <td>
+              
+              <input type="number" value="1" class="quantity" data-price="78710" data-subtotal="subtotal2">
+              
+            </td>
+            
+            <td id="subtotal2" class="subtotal">₱78,710.00</td>
+            
+          </tr>
+          
+          <tr>
+            <td>
+              <a href="#"><i class="fa-regular fa-trash-can"></i></a>
+            </td>
+            
+            <td><img src="baco lippie.png"></td>
+            
+            <td>Glowy Veil Tint 4G [Fall In Mauve]</td>
+            
+            <td>₱1150.00</td>
+            
+            <td>
+              
+              <input type="number" value="1" class="quantity" data-price="1150" data-subtotal="subtotal3">
+              
+            </td>
+            
+            <td  id="subtotal3" class="subtotal">₱1150.00</td>
+            
+          </tr>
+          
+        </tbody>
+        
+      </table>
+      
+      
+    </section>
+    
+    <section id="cart-add" class="section-p1">
+      
+      <div id="subtotal">
+        <h3>Cart Total</h3>
+        <table>
+          
+          <tr>
+            
+            <td>Cart Subtotal</td>
+            <td id="cart-subtotal">₱0.00</td>
+            
+          </tr>
+          <tr>
+            
+            <td>Shipping Fee</td>
+            <td><strong>Free</strong></td>
+          </tr>
+          
+          <tr>
+            <td><strong>Total</strong></td>
+            <td><strong id="cart-total">₱0.00</strong></td>
+          </tr>
+          
+      
+        </table>
+        
+        
+      </div>
+      
+    </section>
+ 
+    
+    <footer class="section-p1">
+      
+      <div class="col">
+        
+        <img src="logo final.png" class="footer-img">
+        <h4>Contact</h4>
+        <p><strong>Address:</strong> #17 Rose Quartz Rd., Serenity Drive, Gangnam-gu, Seoul</p>
+        <p><strong>Contact:</strong> +111 2222 3333 4444</p>
+        <p><strong>Working Hours:</strong> 9:00 AM - 8:00 PM</p>
+        
+        <div class="socials">
+          
+          <h4>Follow Us</h4>
+          
+          <div class="icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+      <div class="col">
+        
+        <h4>About</h4>
+        <a href="about.html">About us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="contact.html">Contact us</a>
+      </div>
+      
+      
+      
+      <div class="col">
+        
+        <h4>My Account</h4>
+        <a href="#">Track My Order</a>
+        <a href="cart.html">Cart</a>
+        <a href="#">Help</a>
+      </div>
+      
+      <div class="copyright">
+        
+        <p>© 2024, Attacca Co. - Web Design Principles Lab Final Project</p>
+        
+      </div>
+      
+    </footer>
+    
+     <script>
+       document.addEventListener('DOMContentLoaded', function() {
+  const quantities = document.querySelectorAll('.quantity');
+  const cartSubtotal = document.getElementById('cart-subtotal');
+  const cartTotal = document.getElementById('cart-total');
+  const customerForm = document.getElementById('customer-form');
+
+  function updateSubtotalAndTotal() {
+    let total = 0;
+
+    quantities.forEach(quantity => {
+      const price = parseFloat(quantity.getAttribute('data-price'));
+      const subtotalId = quantity.getAttribute('data-subtotal');
+      const subtotalElement = document.getElementById(subtotalId);
+      const subtotal = price * quantity.value;
+
+      subtotalElement.textContent = `₱${subtotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+      total += subtotal;
+    });
+
+    cartSubtotal.textContent = `₱${total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    cartTotal.textContent = `₱${total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+  }
+
+  function displayOrderSummary(orderSummary) {
+    let summaryText = `Customer Details:\nName: ${orderSummary.customer.name}\nEmail: ${orderSummary.customer.email}\nAddress: ${orderSummary.customer.address}\n\nProducts:\n`;
+    orderSummary.products.forEach(product => {
+      summaryText += `${product.name} - Quantity: ${product.quantity} - Subtotal: ${product.subtotal}\n`;
+    });
+    summaryText += `\nTotal Amount: ${orderSummary.totalAmount}`;
+
+    alert(summaryText);
+  }
+
+  customerForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(customerForm);
+    const customerDetails = {};
+    for (let [key, value] of formData.entries()) {
+      customerDetails[key] = value;
+    }
+
+    const products = [];
+    quantities.forEach(quantity => {
+      const product = {
+        name: quantity.parentElement.previousElementSibling.textContent,
+        quantity: quantity.value,
+        subtotal: quantity.parentElement.nextElementSibling.textContent
+      };
+      products.push(product);
+    });
+
+    const totalAmount = cartTotal.textContent;
+
+    const orderSummary = {
+      customer: customerDetails,
+      products: products,
+      totalAmount: totalAmount
+    };
+
+    displayOrderSummary(orderSummary);
+  });
+
+  quantities.forEach(quantity => {
+    quantity.addEventListener('input', updateSubtotalAndTotal);
+  });
+
+  
+  updateSubtotalAndTotal();
+});
+
+     </script>
+
+
+    
+    
+  </body>
+  
+  
+  
+  
+  
+  
+</html>
